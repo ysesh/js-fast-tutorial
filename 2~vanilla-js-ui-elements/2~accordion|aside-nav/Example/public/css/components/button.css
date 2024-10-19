@@ -1,0 +1,89 @@
+button,
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  border-radius: .5rem;
+  background: #1454b5;
+  border: 1px solid #1454b5;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  transition: .3s ease-in;
+}
+
+button,
+button span,
+button p,
+.button,
+.button span,
+.button p {
+  color: #fff;
+  font-weight: 500;
+}
+
+button:hover,
+.button:hover {
+  background: #0963eb;
+  border: 1px solid #0963eb;
+
+}
+
+.danger {
+  background: #e02222;
+  border: 1px solid #e02222;
+}
+
+.danger:hover {
+  background: #cc0606;
+  border: 1px solid #cc0606;
+}
+
+.outline {
+  background: none;
+}
+
+.icon {
+  padding: .5rem;
+  aspect-ratio: 1/1;
+}
+
+.light {
+  background: #101010;
+  border: 1px solid #101010;
+}
+
+.light:hover {
+  background: #1d1d1d;
+  border: 1px solid #1d1d1d;
+}
+
+.light:active {
+  background: #303030;
+  border: 1px solid #303030;
+}
+
+.light.selected {
+  background: #353535;
+  border: 1px solid #353535;
+}
+
+.transparent {
+  background: #1d1d1d00;
+  border: 1px solid #1d1d1d00;
+}
+
+.transparent:hover {
+  background: #1d1d1d;
+  border: 1px solid #1d1d1d;
+}
+
+.transparent:active {
+  background: #303030;
+  border: 1px solid #303030;
+}
+
+.transparent.selected {
+  background: #353535;
+  border: 1px solid #353535;
+}

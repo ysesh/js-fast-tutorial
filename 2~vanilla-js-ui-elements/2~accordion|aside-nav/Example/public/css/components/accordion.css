@@ -1,0 +1,33 @@
+.accordion {
+  width: 100%;
+  max-width: 30rem;
+}
+
+.accordion+.accordion {
+  margin-top: 1rem;
+}
+
+.accordion__trigger {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.accordion__trigger__icon {
+  transition: .05s ease-out;
+  transform: rotate(0);
+}
+
+.accordion__container {
+  transition: .15s ease-out;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.accordion.open .accordion__trigger__icon {
+  transform: rotate(45deg);
+}
+
+.accordion__content {
+  padding: 1rem;
+  height: 100%;
+}

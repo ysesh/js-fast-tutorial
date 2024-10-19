@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url(./components/container.css);
+@import url(./components/text.css);
+@import url(./components/button.css);
+@import url(./components/modal.css);
+@import url(./components/header.css);
+@import url(./components/accordion.css);
+@import url(./pages/profile.css);
+
+:root {
+  --header-z-index: 1000;
+  --header-height: 5rem;
+  --header-padding-inline: 2rem;
+  --aside-z-index: 2000;
+  --aside-width: 5rem;
+  --aside-width--open: 15rem;
+  --modal-z-index: 3000;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  background: #0b0b0b;
+  color: #fff;
+  font-family: "Inter", serif;
+}
+
+main {
+  position: relative;
+}
