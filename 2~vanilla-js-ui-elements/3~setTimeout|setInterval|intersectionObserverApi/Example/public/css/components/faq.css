@@ -1,0 +1,21 @@
+.about {
+  padding-top: 4rem;
+
+}
+
+.about p {
+  margin-top: 2rem;
+  font-size: 18px;
+}
+
+.faq {
+  padding-top: 3rem;
+  border: 10px solid red;
+}
+
+#faq {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+}

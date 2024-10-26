@@ -1,0 +1,29 @@
+footer {
+  margin-top: 4rem;
+  width: 100%;
+  background: #121212;
+  padding-top: 3rem;
+  padding-bottom: 10rem;
+}
+
+.footer__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer__item+.footer__item {
+  margin-top: 4rem;
+}
+
+.footer__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer__links__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}

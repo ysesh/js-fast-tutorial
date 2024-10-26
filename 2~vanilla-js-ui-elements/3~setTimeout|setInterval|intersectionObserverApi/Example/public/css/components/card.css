@@ -1,0 +1,15 @@
+.card {
+  padding-top: 4rem;
+}
+
+.card img {
+  width: 100%;
+  max-width: 50rem;
+  border-radius: 2rem;
+}
+
+.card__content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/css/index.css">
+  <title>Billionaires Clones::Main Page</title>
+  <script src="./public/js/index.js" defer></script>
+
+</head>
+
+<body>
+  <div class="burger">
+    <div class="container--full burger__content">
+      <ul class="burger__nav-list">
+        <li>
+          <a href="#">
+            Main page
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Explore
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Search
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <header>
+    <h1 class="logotype">Billionaires Clones</h1>
+    <button class="icon light" onclick="triggerBurger(event)">
+      <img src="public/images/icons/menu.svg" alt="icon">
+    </button>
+  </header>
+  <section class="card">
+    <div class="container card__content">
+      <h1>Look at the <span style="text-decoration: underline;">real</span> billionaires clones</h1>
+      <img src="./public/images/card/image.webp" alt="image">
+    </div>
+  </section>
+  <section class="about container">
+    <h2>About us</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum reiciendis recusandae quibusdam neque ducimus est
+      sapiente, odit hic at placeat nulla quisquam fugiat deleniti mollitia laboriosam. Rerum expedita atque
+      dignissimos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa praesentium sed reprehenderit vero,
+      cum quam soluta atque aut sequi nulla. Pariatur, a vero corrupti facilis optio repudiandae saepe. Delectus,
+      pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quis necessitatibus perspiciatis illo.
+      Expedita eaque repellendus dolorum placeat ad quam autem maxime incidunt similique cum doloribus, voluptatibus
+      molestias iste architecto.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi adipisci dolorem alias minima iure similique
+      doloribus earum inventore ipsum, vel culpa qui consectetur a non? Sed iusto harum blanditiis nemo!
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero labore perspiciatis earum consequuntur recusandae
+      ipsa molestias. Placeat dolorum exercitationem distinctio voluptate saepe, dicta, temporibus sint culpa deleniti
+      neque assumenda repudiandae.
+      Quae aut labore laborum quaerat? Autem libero alias cumque iure ipsum at, explicabo quasi ut numquam illum, hic
+      quam, maiores dolorum! Nulla, veniam reiciendis esse nisi voluptatibus id! Adipisci, illum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi fugit delectus quis quibusdam voluptatum! Atque
+      officiis animi unde et vero nesciunt iusto aliquid adipisci dicta porro. Harum consequuntur et veritatis.
+      Ab totam ratione blanditiis inventore est esse nemo itaque saepe ducimus laborum obcaecati perspiciatis quia
+      possimus odio repellat veniam, quis aliquid ut recusandae sapiente officia! Voluptas, asperiores recusandae?
+      Aliquid, error!
+      Earum quidem quisquam iusto esse animi omnis unde, modi sapiente nesciunt sequi quasi? Qui ipsa perspiciatis magni
+      iure eius repellendus voluptate dolores, eligendi culpa exercitationem debitis tempore ea libero quasi?
+      In quasi repellat ad aut iure voluptatibus, magnam necessitatibus culpa iusto a facilis, nulla et ullam
+      reiciendis, quam temporibus commodi perferendis reprehenderit at dolores rerum. Atque corporis exercitationem
+      reprehenderit commodi!
+      Dolores labore cupiditate nemo laborum accusantium molestias quibusdam suscipit aliquid ea aliquam maiores
+      veritatis quos adipisci non, quo dolorum magnam repellendus veniam! Distinctio ipsum ea corporis laudantium
+      obcaecati. Nam, tempore.</p>
+  </section>
+  <section class="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div id="faq"></div>
+    </div>
+  </section>
+  <footer>
+    <div class="container footer__content">
+      <div class="footer__item">
+        <h1 class="logotype">Billionaires Clones</h1>
+        <div class="footer__links">
+          <div class="footer__links__item">
+            <a href="#">Main</a>
+            <a href="#">About us</a>
+            <a href="#">The billionaires list</a>
+          </div>
+          <div class="footer__links__item">
+            <a href="#">Main</a>
+            <a href="#">About us</a>
+            <a href="#">The billionaires list</a>
+          </div>
+          <div class="footer__links__item">
+            <a href="#">Main</a>
+            <a href="#">About us</a>
+            <a href="#">The billionaires list</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__item">
+        <p>Billionaires Clones, 2024. It's all fake</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="myModal" class="modal">
+    <div class="modal__content">
+      <h3>This is really annoying modal window. CLOSE ME IF YOU CAN!))))</h3>
+      <div class="modal__buttons">
+        <button class="modal__close_button" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => { console.log('Test') }, 2000);
+
+    /**
+     * Block modal close button and show timer
+     * @constructor
+     * @param {number} time - time in seconds
+     * @param {Element} button - button element
+     */
+    function blockCloseButton(time, button) {
+      const baseButtonInnerHTML = button.innerHTML;
+
+      function changeCounterText() {
+        button.innerHTML = `<span class="counter">${time}</span> ${baseButtonInnerHTML}`
+        time--;
+      }
+
+      button.disabled = true;
+      changeCounterText();
+      let timer = setInterval(() => {
+        if (time > 0) {
+          changeCounterText();
+        } else {
+          localStorage.setItem('modalOpened', 'true');
+          clearInterval(timer);
+          button.innerHTML = baseButtonInnerHTML;
+          button.disabled = false;
+        }
+      }, 1000);
+    }
+
+    function openModal() {
+      const modal = document.querySelector('.modal');
+      document.body.style.overflow = 'hidden';
+
+      blockCloseButton(10, modal.querySelector('.modal__close_button'));
+
+      modal.classList.add('open');
+    }
+
+    function closeModal() {
+      const modal = document.querySelector('.modal');
+      document.body.style.overflow = '';
+
+      modal.classList.remove('open');
+    }
+
+    function handleIntersect(entries, observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !localStorage.getItem('modalOpened')) {
+          openModal();
+        }
+
+        prevRatio = entry.intersectionRatio;
+      });
+    }
+
+    let observer;
+
+    let options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: .3,
+    };
+
+    observer = new IntersectionObserver(handleIntersect, options);
+    observer.observe(document.querySelector('.faq'));
+  </script>
+</body>
+
+</html>
